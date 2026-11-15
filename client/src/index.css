@@ -1,0 +1,28 @@
+:root { --bg:#EAF4FF; --card:#B9DCFF; --ink:#16324f; --accent:#245A91; --good:#1f7a46; --bad:#b3261e; }
+* { box-sizing: border-box; }
+body { margin:0; background:var(--bg); color:var(--ink); font-family: system-ui, -apple-system, Segoe UI, Roboto, sans-serif; }
+main { max-width: 640px; margin: 0 auto; padding: 20px 16px 40px; text-align: center; }
+main.host { max-width: 1000px; }
+h1 { font-size: 2rem; } h2 { font-size: 1.4rem; line-height: 1.3; } main.host h2 { font-size: 2rem; }
+input { width:100%; padding:14px; margin:6px 0; font-size:1.1rem; border-radius:10px; border:2px solid #78B9F2; background:var(--card); color:var(--ink); text-transform:none; }
+button { font:inherit; padding:10px 16px; border-radius:10px; border:0; background:var(--accent); color:#fff; cursor:pointer; }
+button:disabled { opacity:.5; cursor:default; }
+button:focus-visible, input:focus-visible { outline:3px solid #245A91; outline-offset:2px; }
+.big { width:100%; padding:16px; font-size:1.2rem; margin-top:10px; } main.host .big { width:auto; padding:16px 40px; }
+.code { font-size: clamp(4rem, 14vw, 9rem); font-weight:800; letter-spacing:.15em; color:var(--accent); }
+.timer { font-size:3rem; font-weight:800; color:var(--accent); }
+.opts { display:grid; gap:10px; margin:14px 0; } main.host .opts { grid-template-columns:1fr 1fr; }
+.opt { text-align:left; background:var(--card); color:var(--ink); padding:16px; border-radius:12px; font-size:1.1rem; border:2px solid #78B9F2; }
+main.host .opt { font-size:1.6rem; }
+.opt b { color:var(--accent); margin-right:8px; }
+.opt.right { background:var(--good); color:#fff; border-color:var(--good); } .opt.right b { color:#fff; }
+.opt.dim { opacity:.4; }
+.chips { display:flex; flex-wrap:wrap; gap:8px; justify-content:center; margin:10px 0; }
+.chips span { background:var(--card); padding:6px 12px; border-radius:20px; }
+.board { list-style:none; padding:0; max-width:520px; margin:10px auto; text-align:left; }
+.board li { display:flex; justify-content:space-between; padding:10px 14px; background:var(--card); margin:6px 0; border-radius:10px; font-size:1.2rem; }
+.err { background:#fde8e6; border:2px solid var(--bad); padding:14px; border-radius:12px; margin:14px 0; }
+.errtext { color:var(--bad); } .locked { font-size:1.2rem; color:var(--good); }
+.banner { background:var(--bad); color:#fff; padding:8px; border-radius:8px; margin-bottom:10px; }
+.who { opacity:.7; }
+@media (prefers-reduced-motion: no-preference) { .timer { transition: color .3s; } }
